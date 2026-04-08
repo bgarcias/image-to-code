@@ -65,6 +65,7 @@ Si hay un `CLAUDE.md` en el proyecto con convenciones definidas, leerlo antes de
 - Elementos semánticos siempre: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`
 - Cada sección lleva un comentario descriptivo: `<!-- SECCIÓN: Hero -->`
 - Clases en kebab-case con prefijo del proyecto: `ph-hero`, `ph-product-card`
+- No usar BEM bajo ninguna circunstancia — sin `__` ni `--` en nombres de clase
 - No usar IDs para estilos, solo clases
 - Un solo `<h1>` por página — jerarquía de headings sin saltar niveles (h1 → h2 → h3)
 - Imágenes sin asset real → placeholder visual (ver sección de placeholders)
