@@ -148,6 +148,23 @@ Variables locales solo para valores muy específicos de una sección:
 
 Si el diseño indica un color de fondo específico para la imagen (ej: imagen lifestyle sobre fondo azul), usar ese color en lugar del gris neutro `#D9D9D9`.
 
+### Carruseles
+
+Cualquier carrusel detectado en la imagen se implementa **siempre con Embla Carousel** — nunca con código custom.
+
+- Cargar vía CDN: `https://unpkg.com/embla-carousel/embla-carousel.umd.js`
+- Inicialización mínima en un `<script>` al final del `<body>`
+- Estructura HTML obligatoria:
+```html
+  <div class="[prefix]-carousel embla">
+    <div class="embla__container">
+      <div class="embla__slide"><!-- item --></div>
+      <div class="embla__slide"><!-- item --></div>
+    </div>
+  </div>
+```
+- No inventar controles (prev/next/dots) que no estén visibles en el diseño — dejar `<!-- TODO: controles -->`
+
 ---
 
 ## Paso 4 — SEO y accesibilidad
@@ -266,7 +283,7 @@ Siempre incluir al final:
 
 ## Lo que esta skill NO hace
 
-- No genera JavaScript ni lógica de interacción
+- No genera JavaScript de interacción custom — la única excepción es la inicialización de Embla Carousel para carruseles detectados en el diseño
 - No usa frameworks CSS (Tailwind, Bootstrap) salvo que el usuario lo pida explícitamente
 - No inventa secciones que no estén en la imagen
 - No aplica mobile-first bajo ninguna circunstancia
